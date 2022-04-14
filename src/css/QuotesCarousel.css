@@ -1,0 +1,133 @@
+.quotesCarousel {
+  height: 350px;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.quotesCarousel__subHeading {
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--color1);
+}
+.quotesCarousel input {
+  display: none;
+}
+.quotesCarousel label {
+  margin: auto;
+  width: 65%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+#q1:checked ~ #quote4,
+#q2:checked ~ #quote5,
+#q3:checked ~ #quote1,
+#q4:checked ~ #quote2,
+#q5:checked ~ #quote3 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(-30%, 0, -200px);
+}
+#q1:checked ~ #quote5,
+#q2:checked ~ #quote1,
+#q3:checked ~ #quote2,
+#q4:checked ~ #quote3,
+#q5:checked ~ #quote4 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+}
+#q1:checked ~ #quote1,
+#q2:checked ~ #quote2,
+#q3:checked ~ #quote3,
+#q4:checked ~ #quote4,
+#q5:checked ~ #quote5 {
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, 0.3), 0 11px 7px 0 rgba(0, 0, 0, 0.19);
+  transform: translate3d(0, 0, 0);
+}
+#q1:checked ~ #quote2,
+#q2:checked ~ #quote3,
+#q3:checked ~ #quote4,
+#q4:checked ~ #quote5,
+#q5:checked ~ #quote1 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(15%, 0, -100px);
+}
+#q1:checked ~ #quote3,
+#q2:checked ~ #quote4,
+#q3:checked ~ #quote5,
+#q4:checked ~ #quote1,
+#q5:checked ~ #quote2 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+  transform: translate3d(30%, 0, -200px);
+}
+
+.quotesCarousel__card {
+  background: var(--color2);
+  padding: 20px 25px;
+  text-align: center;
+  border-radius: 10px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 160px;
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+.quotesCarousel__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 62, 86, 0.6);
+}
+.card1 {
+  background: url("https://source.unsplash.com/random/?nature") var(--color2)
+    no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.card2 {
+  background: url("https://source.unsplash.com/random/?nature,night")
+    var(--color2) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.card3 {
+  background: url("https://source.unsplash.com/random/?nature,sun")
+    var(--color2) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.card4 {
+  background: url("https://source.unsplash.com/random/?nature,sky")
+    var(--color2) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.card5 {
+  background: url("https://source.unsplash.com/random/?nature,moon")
+    var(--color2) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.quotesCarousel__quote {
+  padding-bottom: 20px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 600;
+  z-index: 5;
+}
+.quotesCarousel__author {
+  z-index: 5;
+}
+
+@media screen and (max-width: 750px) {
+  .quotesCarousel label {
+    width: 70%;
+  }
+}

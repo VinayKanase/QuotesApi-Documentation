@@ -1,0 +1,108 @@
+.navbar {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.navbar__logo img {
+  height: 80px;
+  object-fit: contain;
+  padding: 4px;
+  padding-top: 8px;
+}
+
+.navbar__navLinks ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__navLinks ul li {
+  margin: 0 10px;
+}
+.navbar__navLinks ul li a {
+  padding: 10px;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+.navbar__navLinks ul li a:hover {
+  background: var(--color1);
+  color: white;
+}
+.navbar__doc {
+  color: var(--color1);
+}
+.navbar__hamburger,
+.navbar__hamburgerWrapper {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .navbar.active {
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+  }
+  .navbar__hamburgerWrapper {
+    display: block;
+    cursor: pointer;
+    width: 20px;
+    height: 19px;
+  }
+
+  .navbar__hamburger {
+    width: 18px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    display: block;
+    cursor: pointer;
+    transform: all 0.3s ease-in-out;
+  }
+  .navbar__hamburger::before,
+  .navbar__hamburger::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 18px;
+    height: 3px;
+  }
+  .navbar__hamburger::before {
+    top: -5px;
+  }
+  .navbar__hamburger::after {
+    top: 5px;
+  }
+  .active .navbar__hamburger {
+    background-color: white;
+  }
+  .active .navbar__hamburger::before {
+    transform: rotate(45deg) translate(2px, 4px);
+  }
+  .active .navbar__hamburger::after {
+    transform: rotate(-45deg) translate(3px, -5px);
+  }
+  .navbar .navbar__navLinks ul {
+    display: none;
+    transform: all 0.3s ease-in-out;
+  }
+  .navbar .navbar__doc {
+    display: none;
+  }
+  .active .navbar__navLinks ul {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .navbar__navLinks ul li {
+    margin: 50px 0 !important;
+  }
+  .navbar.active .navbar__doc {
+    display: block;
+  }
+}

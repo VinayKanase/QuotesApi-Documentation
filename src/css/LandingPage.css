@@ -1,0 +1,151 @@
+.landingPage {
+  position: relative;
+  background: var(--color2);
+  padding: 40px;
+  height: 700px;
+  margin-bottom: 80px;
+}
+.landingPage::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  border-radius: 25%;
+  transform: translateY(25%);
+}
+.bgOverlay__circleSvg {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+}
+.circleSvg1,
+.circleSvg2,
+.circleSvg3,
+.circleSvg4 {
+  position: absolute;
+}
+
+.circleSvg1 {
+  top: 60%;
+  left: 55%;
+}
+.circleSvg2 {
+  top: 65%;
+  left: 12%;
+}
+.circleSvg4 {
+  top: 40%;
+  right: 10%;
+}
+.circleSvg1 svg {
+  width: 200px;
+}
+
+.circleSvg1 svg #svg1,
+.circleSvg2 svg #svg2,
+.circleSvg3 svg #svg3,
+.circleSvg4 svg #svg4 {
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.circleSvg1 svg:hover #svg1,
+.circleSvg2 svg:hover #svg2,
+.circleSvg3 svg:hover #svg3,
+.circleSvg4 svg:hover #svg4 {
+  animation: scaleInOut 1s infinite alternate ease-in-out;
+}
+
+@keyframes scaleInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.landingPage__text {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+}
+
+.landingPage__heading {
+  font-family: Quicksand, sans-serif;
+  font-size: 4rem;
+  color: var(--color1);
+  letter-spacing: 2px;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+.bgOverlay__quoteSvg img {
+  width: 280px;
+  object-fit: contain;
+  position: absolute;
+  top: 10px;
+  right: 6%;
+  transform: translate(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.bgOverlay__quoteSvg img:hover {
+  transform: translate(5px, -10px);
+}
+
+@media screen and (max-width: 750px) {
+  .circleSvg1 {
+    left: 70%;
+    top: 70%;
+  }
+  .circleSvg2 {
+    top: 80%;
+    left: 10%;
+  }
+  .circleSvg3 {
+    left: 5%;
+  }
+  .circleSvg4 {
+    right: 2%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .circleSvg3 {
+    left: -25%;
+  }
+  .circleSvg4 {
+    top: 38%;
+    right: -5%;
+  }
+  .bgOverlay__quoteSvg img {
+    width: 240px;
+    top: 60px;
+    right: 4%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .bgOverlay__quoteSvg img {
+    top: 20%;
+    right: 4%;
+  }
+  .circleSvg4 {
+    top: 8%;
+    left: 4%;
+  }
+  .circleSvg2 {
+    left: 38%;
+  }
+  .circleSvg1,
+  .circleSvg3 {
+    display: none;
+  }
+  .landingPage__text {
+    left: 20%;
+    transform: translate(-20%, -50%);
+  }
+}

@@ -1,0 +1,37 @@
+.footer {
+  width: 100%;
+  margin-top: 100px;
+  background: var(--color2) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4px solid black;
+}
+.footer__copyrightes {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.footer__socialLinks {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+.footer__socialLinks a {
+  margin: 0 10px;
+  transition: all 0.4s;
+}
+.footer__socialLinks img {
+  width: 35px;
+  object-fit: contain;
+}
+
+.footer__socialLinks a:hover img {
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}

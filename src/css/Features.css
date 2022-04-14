@@ -1,0 +1,73 @@
+.features {
+  margin: 40px 0;
+}
+.features__subHeading {
+  text-align: center;
+}
+.features__slider {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+}
+
+.features__sliderWrapper {
+  width: calc(100% - 30px);
+  overflow-x: scroll;
+  display: flex;
+}
+.features__sliderWrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.features__sliderWrapper::-webkit-scrollbar-track {
+  background-color: var(--color2);
+}
+.features__sliderWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--color1);
+  border-radius: 5px;
+  /* border: 3px solid orange; */
+}
+.features__card {
+  width: 290px;
+  height: 380px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px;
+}
+
+.features__cardHeading {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+}
+.feature__cardSvg svg {
+  width: 240px;
+}
+
+.features__card:hover .change1 {
+  opacity: 0.85;
+}
+.features__card .scaleChange {
+  transform: scale(1);
+  transition: all 0.4s;
+}
+.features__card:hover .scaleChange {
+  transform: scale(0.95) translateX(4px);
+}
+.features__card:hover .features__cardHeading {
+  color: var(--color1);
+}
+
+@media screen and (max-width: 750px) {
+  .features__card {
+    height: 330px;
+    width: 260px;
+  }
+}
