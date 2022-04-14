@@ -13,32 +13,32 @@ function Navbar() {
   return (
     <nav className={hamburgerActive ? "navbar active" : "navbar"}>
       <div className="navbar__logo">
-        <Link onClick={() => hamburgerHandler(true)} to="/">
+        <Link onClick={() => hamburgerHandler(true)} to="./">
           <img src={Logo} alt="QuotesAPI Logo" />
         </Link>
       </div>
       <div className="navbar__navLinks">
         <ul>
           <li>
-            <Link onClick={() => hamburgerHandler(true)} to="/">
+            <Link onClick={() => hamburgerHandler(true)} to="./">
               Home
             </Link>
           </li>
 
           <li>
-            <Link onClick={() => hamburgerHandler(true)} to="/searchquote">
+            <Link onClick={() => hamburgerHandler(true)} to="./searchquote">
               Search for Quotes
             </Link>
           </li>
           <li>
-            <Link onClick={() => hamburgerHandler(true)} to="/postquote">
+            <Link onClick={() => hamburgerHandler(true)} to="./postquote">
               Post for Quote
             </Link>
           </li>
         </ul>
       </div>
       <div className="navbar__doc">
-        <Link onClick={() => hamburgerHandler(true)} to="/documentation">
+        <Link onClick={() => hamburgerHandler(true)} to="./documentation">
           API Documentation
         </Link>
       </div>
