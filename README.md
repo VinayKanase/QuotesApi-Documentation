@@ -1,3 +1,4 @@
+
 <p align="center">
   <a href="" rel="noopener">
  <img width=200px height=200px src="./public/logo512.png" alt="Project logo"></a>
@@ -26,7 +27,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-The purpose of this repository is to Show examples and documenatation of [api](https://quotesapivsk.herokuapp.com/quotes) created by me.
+The purpose of this repository is to Show examples and documenatation of [api](https://quotesapivsk.onrender.com/quotes) created by me.
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
@@ -50,3 +51,4 @@ See also the list of [contributors](https://github.com/VinayKanase/QuotesApi-Doc
   - [Unsplash](https://unsplash.com/)
   - [UnDraw](https://undraw.co/)
   - [Giphy](https://giphy.com/)
+

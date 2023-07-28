@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiInstance = axios.create({
- baseURL: 'https://quotesapivsk.herokuapp.com/'
+  baseURL: "https://quotesapivsk.onrender.com/",
 });
 
 export default apiInstance;

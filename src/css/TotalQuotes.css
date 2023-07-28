@@ -33,6 +33,8 @@
 }
 .totalquotes__bgOverlay img {
   z-index: 100;
+  position: relative;
+  width: 100%;
 }
 .totalquotes__bgOverlay::after {
   content: "";
