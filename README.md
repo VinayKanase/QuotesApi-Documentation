@@ -31,7 +31,7 @@ The purpose of this repository is to Show examples and documenatation of [api](h
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Quotes API Link: https://quotesapivsk.herokuapp.com
+Quotes API Link: https://quotesapivsk.onrender.com/quotes
 
 Quotes API Documentation: https://vinaykanase.github.io/QuotesApi-Documentation/
 
